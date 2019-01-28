@@ -17,7 +17,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by n3k4a & Baron','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by !ν¢ |Bako gaming#9524 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -55,7 +55,7 @@ client.on('ready', function(){
 });
 
 
-console.log('n3k4a is one ');
+console.log('Bako is one ');
 client.on('ready', () => {
   console.log(`im redey`);
 });
