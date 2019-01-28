@@ -551,8 +551,8 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')
-      .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://modest-lewin-146a75.netlify.com`)
+      .setFooter('©  𝐒𝐔𝐏𝐄𝐑: جميع الحقوق محفوظة 2019 لــبوت')
+      .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://discordapp.com/oauth2/authorize?client_id=539448865670037534&scope=bot&permissions=2080374975`)
   message.author.send({embed});
 
  }
@@ -592,7 +592,7 @@ client.on("message", message => {
       .setTitle('Click here')
       .setURL(' https://discord.gg/ZnPDHaA ')
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')  
+      .setFooter('© 𝐒𝐔𝐏𝐄𝐑 : جميع الحقوق محفوظة 2018 لــبوت')  
       .addField('سيرفر الدعم الفني', ` https://discord.gg/ZnPDHaA  `)
   message.author.send({embed});
 
@@ -707,17 +707,17 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``this Premium Bot`` ')
+            .setTitle('``this 𝐒𝐔𝐏𝐄𝐑`` ')
             .addField('``سرعة البوت 📡``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``الرامات المستخدمة ☄️``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('`` السيرفرات🏢``', [client.guilds.size], true)
             .addField('``الشنلات💻``' , `[ ${client.channels.size} ]` , true)
             .addField('``اعضاء السيرفر 👨‍👨‍👧‍👧``' ,`[ ${client.users.size} ]` , true)
-            .addField('``Premium Bot اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
+            .addField('``𝐒𝐔𝐏𝐄𝐑 اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
             .addField('``الايدي تبعي ☑️``' , `[ ${client.user.id} ]` , true)
 			      .addField('``امر تشغيلي ➡️``' , `[ - ]` , true)
 			      .addField('``الغه التي  تبرمجت بها ☎️``' , `[ Java Script ]` , true)
-			      .setFooter('By | 🔥n3k4a & baron🔥 ')
+			      .setFooter('By | 🔥Bako🔥 ')
     })
 }
 });
@@ -846,13 +846,13 @@ client.on('message',async message => {
 });
 
 client.on("guildCreate", guild => {
-console.log(` Premium Bot  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
-client.channels.get("489944931868082177").send('** :purple_heart: Premium Bot ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
+console.log(` 𝐒𝐔𝐏𝐄𝐑  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
+client.channels.get("489944931868082177").send('** :purple_heart: 𝐒𝐔𝐏𝐄𝐑 ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
 });
 
 client.on("guildDelete", guild => {
-  console.log(`  Premium Bot  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
-  client.channels.get("489944931868082177").send('** :purple_heart: Premium Bot  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
+  console.log(`  𝐒𝐔𝐏𝐄𝐑  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
+  client.channels.get("489944931868082177").send('** :purple_heart: 𝐒𝐔𝐏𝐄𝐑  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
   });
 
 var prefix = "-";
@@ -929,8 +929,8 @@ client.on('message', message => {
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` Premium Bot
- .`, 'https://aladdintravel.com/wp-content/uploads/2014/11/pinterest-logo-2-1074x1067.png')
+                 .setFooter(` 𝐒𝐔𝐏𝐄𝐑
+ .`, 'https://cdn.discordapp.com/attachments/415997161252192257/539587211792744468/download.png')
 
   message.channel.sendEmbed(embed);
     }
@@ -1602,7 +1602,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© Premium Bot ™."
+          text: "© 𝐒𝐔𝐏𝐄𝐑."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
