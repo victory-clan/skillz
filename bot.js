@@ -2026,3 +2026,5 @@ client.on('message',async message => {
     .setColor('#36393e')
     .setThumbnail(message.author.avatarURL)
     .
+    
+client.login(process.env.BOT_TOKEN);
