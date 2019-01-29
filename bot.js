@@ -2001,7 +2001,7 @@ message.channel.send(embed500)
 
 
 }
-})
+});
 
 var prefix = "-"
 
