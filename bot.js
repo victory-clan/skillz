@@ -13,13 +13,13 @@ const discord_token = "NDIyMDM3NzQwNTkxMzgyNTI4.DYV8zA.6vBJjF7Op9T_bH_YOwRMXqwh9
 var table = require('table').table
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("SkiLLz Community 0.1K By !ν¢ |Bako gaming#6414 , -help .",{type: 'WATCHING'});
+          client.user.setActivity("𝐒𝐔𝐏𝐄𝐑 By !ν¢ |Bako gaming#6414 , -help .",{type: 'WATCHING'});
  
   });
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'  SkiLLz Community 0.1K By !ν¢ |Bako gaming#6414 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,'  𝐒𝐔𝐏𝐄𝐑 By !ν¢ |Bako gaming#6414 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
