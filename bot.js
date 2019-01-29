@@ -2025,8 +2025,6 @@ client.on('message',async message => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor('#36393e')
     .setThumbnail(message.author.avatarURL)
-    .   
-}):
-
+});
 
 client.login(process.env.BOT_TOKEN);
