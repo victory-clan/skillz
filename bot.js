@@ -13,13 +13,13 @@ const discord_token = "NDIyMDM3NzQwNTkxMzgyNTI4.DYV8zA.6vBJjF7Op9T_bH_YOwRMXqwh9
 var table = require('table').table
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("𝐒𝐔𝐏𝐄𝐑 By !ν¢ |Bako gaming#6414 , -help .",{type: 'WATCHING'});
+          client.user.setActivity("Sarcasm Land. By !ν¢ |Bako gaming#6414 , -help .",{type: 'WATCHING'});
  
   });
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'  𝐒𝐔𝐏𝐄𝐑 By !ν¢ |Bako gaming#6414 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' Sarcasm Land. By !ν¢ |Bako gaming#6414 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -551,7 +551,7 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('©  𝐒𝐔𝐏𝐄𝐑: جميع الحقوق محفوظة 2019 لــبوت')
+      .setFooter('©  Sarcasm Land.: جميع الحقوق محفوظة 2019 لــبوت')
       .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://discordapp.com/oauth2/authorize?client_id=539448865670037534&scope=bot&permissions=2080374975`)
   message.author.send({embed});
 
@@ -592,7 +592,7 @@ client.on("message", message => {
       .setTitle('Click here')
       .setURL(' https://discord.gg/ZnPDHaA ')
       .setColor("RANDOM")
-      .setFooter('© 𝐒𝐔𝐏𝐄𝐑 : جميع الحقوق محفوظة 2018 لــبوت')  
+      .setFooter('© Sarcasm Land. : جميع الحقوق محفوظة 2019 لــبوت')  
       .addField('سيرفر الدعم الفني', ` https://discord.gg/ZnPDHaA  `)
   message.author.send({embed});
 
@@ -707,13 +707,13 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``this 𝐒𝐔𝐏𝐄𝐑`` ')
+            .setTitle('``this Sarcasm Land.`` ')
             .addField('``سرعة البوت 📡``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``الرامات المستخدمة ☄️``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('`` السيرفرات🏢``', [client.guilds.size], true)
             .addField('``الشنلات💻``' , `[ ${client.channels.size} ]` , true)
             .addField('``اعضاء السيرفر 👨‍👨‍👧‍👧``' ,`[ ${client.users.size} ]` , true)
-            .addField('``𝐒𝐔𝐏𝐄𝐑 اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
+            .addField('``Sarcasm Land. اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
             .addField('``الايدي تبعي ☑️``' , `[ ${client.user.id} ]` , true)
 			      .addField('``امر تشغيلي ➡️``' , `[ - ]` , true)
 			      .addField('``الغه التي  تبرمجت بها ☎️``' , `[ Java Script ]` , true)
@@ -846,13 +846,13 @@ client.on('message',async message => {
 });
 
 client.on("guildCreate", guild => {
-console.log(` 𝐒𝐔𝐏𝐄𝐑  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
-client.channels.get("489944931868082177").send('** :purple_heart: 𝐒𝐔𝐏𝐄𝐑 ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
+console.log(` Sarcasm Land.  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
+client.channels.get("489944931868082177").send('** :purple_heart: Sarcasm Land. ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
 });
 
 client.on("guildDelete", guild => {
-  console.log(`  𝐒𝐔𝐏𝐄𝐑  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
-  client.channels.get("489944931868082177").send('** :purple_heart: 𝐒𝐔𝐏𝐄𝐑  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
+  console.log(`  Sarcasm Land.  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
+  client.channels.get("489944931868082177").send('** :purple_heart: Sarcasm Land.  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
   });
 
 var prefix = "-";
@@ -929,7 +929,7 @@ client.on('message', message => {
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` 𝐒𝐔𝐏𝐄𝐑
+                 .setFooter(` Sarcasm Land.
  .`, 'https://cdn.discordapp.com/attachments/415997161252192257/539587211792744468/download.png')
 
   message.channel.sendEmbed(embed);
@@ -1602,7 +1602,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© 𝐒𝐔𝐏𝐄𝐑."
+          text: "© Sarcasm Land.."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1910,10 +1910,10 @@ client.on('message',async msg => {
   if(msg.content.startsWith(p + "setstats")) {
   if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('? **لا معك رتبه**');
   if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('? **البوت لا يمتلك صلاحية**');
-  var ggg= msg.guild.createChannel('n3k4a is one', 'category').then(kk => {
-           var ccc =msg.guild.createChannel('n3k4a is one', 'voice').then(al => {
-                var aa =msg.guild.createChannel('n3k4a is one', 'voice').then(alp => {
-                   var aaa =msg.guild.createChannel('n3k4a is one ', 'voice').then(alph => {
+  var ggg= msg.guild.createChannel('Bako is one', 'category').then(kk => {
+           var ccc =msg.guild.createChannel('Bako is one', 'voice').then(al => {
+                var aa =msg.guild.createChannel('Bako is one', 'voice').then(alp => {
+                   var aaa =msg.guild.createChannel('Bako is one ', 'voice').then(alph => {
        al.setParent(kk);
        alp.setParent(kk);
        alph.setParent(kk);
