@@ -13,7 +13,7 @@ const discord_token = "NDIyMDM3NzQwNTkxMzgyNTI4.DYV8zA.6vBJjF7Op9T_bH_YOwRMXqwh9
 var table = require('table').table
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("Sarcasm Land. By !ν¢ |Bako gaming#6414 , -help .",{type: 'WATCHING'});
+          client.user.setActivity("Sarcasm Land. By !Bako gaming#6414 , -help .",{type: 'WATCHING'});
  
   });
 
