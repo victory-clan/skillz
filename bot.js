@@ -81,6 +81,8 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ------------------------------
+         _obc : برودكاست متوسط
+         _bc  : برودكاست عادى
          _bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
          _bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
          _bc3 : برودكاست للاعضاء  الاونلاين فقط
@@ -99,6 +101,7 @@ client.on("message", message => {
          _guilds : عدد سيرفر البوت
          _inv : دعوه البوت الى سيرفر
          _help : عرض هذه الرسالة
+         _topinvites : توب انفيت
          ------------------------------
          
        **  `)
@@ -304,15 +307,20 @@ if (message.content.startsWith(prefix+"cv")) {
           
         }
 });
-client.on('message', message => {
-  if (true) {
-if (message.content === '_inv') {
-      message.author.send('https://discordapp.com/oauth2/authorize?client_id=541681966404075520&permissions=8&scope=bot').catch(e => console.log(e.stack));
 
-    }
-   } 
-  });
+client.on('message' , message => {
+    if (message.content === (prefix + "inv")) {
+        if(!message.channel.guild) return message.reply('This Command is Only For Servers');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)
+ .setAuthor(message.author.username, message.author.avatarURL)
+ .setTitle('Click here to be redirected to Sarcasm System.')//رسالة
+ .setURL('https://discordapp.com/oauth2/authorize?client_id=541681966404075520&permissions=8&scope=bot')//حط رابط اضافة البوت
+  message.channel.sendEmbed(embed);
 
+   }
+});
 
 client.on('message', message => {
      if (message.content === "_inv") {
@@ -480,22 +488,20 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   });
   }
 });
-client.on("guildMemberAdd", member => {
-        if(member.guild.id === "437236584329379841") {  // ايدي السيرفر
-  const channel = member.guild.channels.find('id', '437788428869042179'); //ايدي الروم
-if (!channel) return;
-channel.send(`**<@${member.user.id}> Welcome To Sarcasm Land.  ** ❤️ `)  
-}});
-client.on("guildMemberRemove", member => {
-        if(member.guild.id === "513019757746847754") { 
-  const channel = member.guild.channels.find('id', '514208348682321921'); 
-if (!channel) return;
-  channel.send(`**${member.user.tag} Left The Server  ** 😭 `) 
-}});
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name",".Land,!")); //اسم الرتبة
-    });
-	
+
+client.on('message', message => {  
+            if(!message.channel.guild) return; 
+var args = message.content.split(' ').slice(1).join(' '); 
+if (message.content.startsWith('*Founder')){ 
+ if (message.author.id !== '413597534187945986') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **') 
+message.channel.sendMessage('جار ارسال الرسالة |✅') 
+client.users.forEach(m =>{ 
+m.sendMessage(args) 
+}) 
+} 
+});
+
+
 
 client.on('message', message => {
              if (!message.channel.guild) return;
@@ -549,5 +555,135 @@ client.on('message' , async (message) => {
     message.channel.send(embed)
     }
 });
- 	
+
+client.on('message', message => {
+	    var prefix = "_";
+              if(!message.channel.guild) return;
+    if(message.content.startsWith(prefix + 'bc')) {
+    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+  if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+    let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+    let copy = "by Fras#9999";
+    let request = `Requested By ${message.author.username}`;
+    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
+    msg.react('✅')
+    .then(() => msg.react('❌'))
+    .then(() =>msg.react('✅'))
+    
+    let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+    let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+    
+    let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+    let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+ reaction1.on("collect", r => {
+    message.channel.send(`**☑ | Done ... تم الانتهاء وارسال البرودكاست بنجاح __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
+    message.guild.members.forEach(m => {
+  
+  var bc = new
+       Discord.RichEmbed()
+       .setColor('RANDOM')
+       .setTitle('Broadcast')
+       .addField('سيرفر', message.guild.name)
+       .addField('المرسل', message.author.username)
+       .addField('الرسالة', args)
+       .setThumbnail(message.author.avatarURL)
+       .setFooter(copy, client.user.avatarURL);
+    m.send({ embed: bc })
+    msg.delete();
+    })
+    })
+    reaction2.on("collect", r => {
+    message.channel.send(`**تم الغاء ارسال البرودكاست.**`).then(m => m.delete(5000));
+    msg.delete();
+    })
+    })
+    }
+    });
+
+client.on('message', message => {/////toxic codes and zezo
+    if(message.content.toLowerCase().startsWith(`discord.gg`)){
+        message.member.addRole(message.guild.roles.find('name', 'Muted'));
+        var embed = new Discord.RichEmbed()
+        .setDescription(`تمت معاقبتك لنشرك سيرفر اخر هنا`)
+            message.delete();
+        message.channel.send(`<@${message.author.id}`);
+        message.channel.send({embed});
+    }/////toxic codes and zezo
+});/////toxic codes and zezo
+
+client.on('message',message =>{   ///Toxic Codes
+    var prefix = "_";
+    if(message.content.startsWith(prefix + 'topinvites')) {  ///Toxic Codes
+  message.guild.fetchInvites().then(i =>{   ///Toxic Codes
+  var invites = [];
+   
+  i.forEach(inv =>{
+    var [invs,i]=[{},null];
+     
+    if(inv.maxUses){
+        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
+    }else{
+        invs[inv.code] =+ inv.uses;
+    }
+        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
+   
+  });
+  var embed = new Discord.RichEmbed()
+  .setColor("#000000")
+  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
+  .setThumbnail("https://cdn.discordapp.com/attachments/530825760127320074/541714820878303234/ef87d2a67879a264.png")
+           message.channel.send({ embed: embed });  
+   
+  });  ///Toxic Codes
+   
+    }   ///Toxic Codes
+  });  ///Toxic Codes
+
+var prefix = "_";
+
+client.on("message", message => {
+
+            if (message.content.startsWith(prefix + "obc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.delete(); 
+};     
+});
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor(0x5500ff)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك سيرفر الدعم الفنى :https://discord.gg/KAtNSuw**`)
+      guild.owner.send(embed)
+});
+
+//Toxic Codes // n3k4a is one //Toxic Codes // n3k4a is one //Toxic Codes // n3k4a is one
+ 
+const Discord = require('discord.js')//Toxic Codes // n3k4a is one
+const client = new Discord.Client();//Toxic Codes // n3k4a is one
+client.on('ready', function(){//Toxic Codes // n3k4a is one
+ console.log(`Logged in as ${client.user.tag}!`); //Toxic Codes // n3k4a is one
+   
+   // var s = ['483063515981283354','483063446376677386','483063378726879232','483063354332545045','483063463179190293']; // صور اضافيه
+   var s = ['483055660209012736','480169573530861578','483055655800930315'];  // صور  الي بتشغل
+    setInterval(function (){//Toxic Codes // n3k4a is one  
+    client.user.setPresence({//Toxic Codes // n3k4a is one
+ game: { //Toxic Codes // n3k4a is one
+    type: 1,//Toxic Codes // n3k4a is one
+     url: 'https://www.twitch.tv/n3k4a',//Toxic Codes // n3k4a is one
+    name: '_help / by !Bako gaming#6414 ',  // الكلام الي في التوتش//Toxic Codes // n3k4a is one
+    application_id: '541681966404075520', // ايدي البوت او ايدي الحساب حقك //Toxic Codes // n3k4a is one
+     assets: {//Toxic Codes // n3k4a is one
+         large_image:   `${s[Math.floor(Math.random() * s.length)]}`,//Toxic Codes // n3k4a is one
+ 
+    }//Toxic Codes // n3k4a is one
+  }//Toxic Codes // n3k4a is one
+    });//Toxic Codes // n3k4a is one
+    }, 5000);//سرعه تغير الصور  // n3k4a is one
+});//Toxic Codes // n3k4a is one
+
 client.login(process.env.BOT_TOKEN);
