@@ -12,14 +12,12 @@ const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const discord_token = "NDIyMDM3NzQwNTkxMzgyNTI4.DYV8zA.6vBJjF7Op9T_bH_YOwRMXqwh9vc";
 var table = require('table').table
 client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("Sarcasm Land. By !Bako gaming#6414 , -help .",{type: 'WATCHING'});
- 
-  });
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' Sarcasm Land. By !Bako gaming#6414 ','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' Sarcasm System. by Bako','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: Bako| BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -105,7 +103,7 @@ const x5bz4 = [
    '*** مريم : يا ايها ا??مخادع اين انت ***',
    '*** مريم : اعلم انك هنا في المنزل ***',
    '*** مريم : ماذا تريد ان تسمع ***',
-   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/watch?v=hvSiuQccmtg ***',
+   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/channel/UCfo8zSHiyVA0BbiIiiE-2uw ***',
    '*** احد ما خرج من المنزل ***',
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدنا في نشر البوت وادخل هذا السيرفر https://discord.gg/KAtNSuw ***'
 ]
@@ -551,8 +549,8 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('©  Sarcasm System.: جميع الحقوق محفوظة 2019 لــبوت')
-      .addField('Sarcasm System. شكرا لك لاستخدامك  ل  ', `https://discordapp.com/oauth2/authorize?client_id=539787837931782165&scope=bot&permissions=2080374975`)
+      .setFooter('© Sarcasm System :heart: جميع الحقوق محفوظة 2019 لــبوت')
+      .addField('Sarcasm System شكرا لك لاستخدامك  ل  ', `https://discordapp.com/oauth2/authorize?client_id=541681966404075520&scope=bot&permissions=2080374975`)
   message.author.send({embed});
 
  }
@@ -578,7 +576,7 @@ client.on('message',message =>{
   var embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://cdn.discordapp.com/attachments/462220624656334849/487684860442443787/ce5fb05919818916b5f598f3ee18afaa.png")
+  .setThumbnail("https://cdn.discordapp.com/attachments/530825760127320074/541714820878303234/ef87d2a67879a264.png")
            message.channel.send({ embed: embed });
    
   });
@@ -592,8 +590,8 @@ client.on("message", message => {
       .setTitle('Click here')
       .setURL(' https://discord.gg/ZnPDHaA ')
       .setColor("RANDOM")
-      .setFooter('© Sarcasm System. : جميع الحقوق محفوظة 2019 لــبوت')  
-      .addField('سيرفر الدعم الفني', ` https://discord.gg/KAtNSuw  `)
+      .setFooter('© Sarcasm System :heart: جميع الحقوق محفوظة 2019 لــبوت')  
+      .addField('سيرفر الدعم الفني', ` https://discord.gg/QkXgTR  `)
   message.author.send({embed});
 
  }
@@ -707,13 +705,13 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``this Sarcasm System.`` ')
+            .setTitle('``this Sarcasm System`` ')
             .addField('``سرعة البوت 📡``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``الرامات المستخدمة ☄️``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('`` السيرفرات🏢``', [client.guilds.size], true)
             .addField('``الشنلات💻``' , `[ ${client.channels.size} ]` , true)
             .addField('``اعضاء السيرفر 👨‍👨‍👧‍👧``' ,`[ ${client.users.size} ]` , true)
-            .addField('``Sarcasm System. اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
+            .addField('``Sarcasm System اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
             .addField('``الايدي تبعي ☑️``' , `[ ${client.user.id} ]` , true)
 			      .addField('``امر تشغيلي ➡️``' , `[ - ]` , true)
 			      .addField('``الغه التي  تبرمجت بها ☎️``' , `[ Java Script ]` , true)
@@ -846,13 +844,13 @@ client.on('message',async message => {
 });
 
 client.on("guildCreate", guild => {
-console.log(` Sarcasm Land.  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
-client.channels.get("489944931868082177").send('** :purple_heart: Sarcasm System. ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
+console.log(` Premium Bot  Added To Server ${guild.name} , The Owner Is ${guild.owner.user.username} , Members In Server : **[${guild.memberCount}]**            `)
+client.channels.get("489944931868082177").send('** :purple_heart: Premium Bot ** ``Added``:white_check_mark:  To Server '+`** [ ${guild.name} ] **`+''+'  The Owner Is  ' +`**[ ${guild.owner.user.username} ]** , Members In Server : **[${guild.memberCount}]**` +'')
 });
 
 client.on("guildDelete", guild => {
-  console.log(`  Sarcasm Land.  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
-  client.channels.get("489944931868082177").send('** :purple_heart: Sarcasm System.  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
+  console.log(`  Premium Bot  Leave From Server ${guild.name}, The Server Owner Is ${guild.owner.user.username}`)
+  client.channels.get("489944931868082177").send('** :purple_heart: Premium Bot  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
   });
 
 var prefix = "-";
@@ -929,8 +927,8 @@ client.on('message', message => {
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` Sarcasm Land.
- .`, 'https://cdn.discordapp.com/attachments/530825760127320074/541611986408964106/SSS.png')
+                 .setFooter(` Premium Bot
+ .`, 'https://cdn.discordapp.com/attachments/530825760127320074/541714820878303234/ef87d2a67879a264.png')
 
   message.channel.sendEmbed(embed);
     }
@@ -1602,7 +1600,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© Sarcasm Land.."
+          text: "© Premium Bot ™."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1752,7 +1750,7 @@ if (message.content.startsWith('-ask')) {
     .addField('Author:', `${Author}`)
     .addField('Example:', `${exam}`)
     .addField('Rating', `👍 ${thumup} 👎 ${thumdown}`, true)
-    .setThumbnail('https://cdn.discordapp.com/attachments/530825760127320074/541611986408964106/SSS.png');
+    .setThumbnail('https://cdn.discordapp.com/attachments/530825760127320074/541714820878303234/ef87d2a67879a264.png');
         message.channel.send({embed}).catch(e => console.log(e));
     }).catch(err => {
         if (err) {
@@ -1910,10 +1908,10 @@ client.on('message',async msg => {
   if(msg.content.startsWith(p + "setstats")) {
   if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('? **لا معك رتبه**');
   if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('? **البوت لا يمتلك صلاحية**');
-  var ggg= msg.guild.createChannel('Bako is one', 'category').then(kk => {
-           var ccc =msg.guild.createChannel('Bako is one', 'voice').then(al => {
-                var aa =msg.guild.createChannel('Bako is one', 'voice').then(alp => {
-                   var aaa =msg.guild.createChannel('Bako is one ', 'voice').then(alph => {
+  var ggg= msg.guild.createChannel('n3k4a is one', 'category').then(kk => {
+           var ccc =msg.guild.createChannel('n3k4a is one', 'voice').then(al => {
+                var aa =msg.guild.createChannel('n3k4a is one', 'voice').then(alp => {
+                   var aaa =msg.guild.createChannel('n3k4a is one ', 'voice').then(alph => {
        al.setParent(kk);
        alp.setParent(kk);
        alph.setParent(kk);
@@ -2001,7 +1999,7 @@ message.channel.send(embed500)
 
 
 }
-});
+})
 
 var prefix = "-"
 
@@ -2025,6 +2023,131 @@ client.on('message',async message => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor('#36393e')
     .setThumbnail(message.author.avatarURL)
+    .addField('» مضى على دخولك الدسكورد', `${created.toFixed(0)} يومّا`,true)
+    .addField('» مضى على دخولك السيرفر', `${joined.toFixed(0)} يومّا`,true)
+    .addField('» دعوات',inviteCount,true)
+    .setFooter(' Premium Bot™ © | 2018.');
+
+    message.channel.send(embed);
+  });
+  }
 });
-	  
+  
+
+var prefix = "-"
+
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+client.on('message', message => {
+	var prefix = "-";
+   if(!message.channel.guild) return;
+if(message.content.startsWith(prefix + 'clear')) {
+if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
+let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let request = `Requested By ${message.author.username}`;
+message.channel.send(`**Are You sure you want to clear the chat?**`).then(msg => {
+msg.react('✅')
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
+
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+reaction1.on("collect", r => {
+message.channel.send(`Chat will delete`).then(m => m.delete(5000));
+var msg;
+        msg = parseInt();
+
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "`` Chat Deleted ``",
+        color: 0x06DF00,
+        footer: {
+
+        }
+      }}).then(msg => {msg.delete(3000)});
+
+})
+reaction2.on("collect", r => {
+message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
+msg.delete();
+})
+})
+}
+});
+
+client.on("message", message => {
+    var prefix = "-";
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix + "clear")) {
+ if (!args[1]) {
+                                let x5bz1 = new Discord.RichEmbed()
+                                .setDescription("-clear <number>")
+                                .setColor("#0000FF")
+                                message.channel.sendEmbed(x5bz1);
+                            } else {
+                            let messagecount = parseInt(args[1]);
+                            message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
+                                                          message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
+                            message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
+                            let x5bz2 = new Discord.RichEmbed()
+                                                            .setColor("#008000")
+                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message!")
+                                                                                        message.delete("..");
+                                message.channel.sendEmbed(x5bz2);
+                            }
+                          }
+});
+
+client.on('message', function(msg) {
+    const prefix = '-'
+    if(msg.content.startsWith (prefix  + 'server')) {
+      let embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setThumbnail(msg.guild.iconURL)
+      .setTitle(`Showing Details Of  **${msg.guild.name}*`)
+      .addField('🌐** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
+      .addField('🏅** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('👩‍👩‍👧‍👧 👨‍👨‍👦**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('👁**__ عدد الاعضاء الاونلاين__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField('📝**__ الرومات الكتابية__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
+      .addField('🎤**__ رومات الصوت__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
+      .addField('👑**__ الأونـر__**',`**${msg.guild.owner}**`,true)
+      .addField('🆔**__ ايدي السيرفر__**',`**${msg.guild.id}**`,true)
+      .addField('📅**__ تم عمل السيرفر في__**',msg.guild.createdAt.toLocaleString())
+      msg.channel.send({embed:embed});
+    }
+  });
+
+  var prefix = "-";
+    client.on('message', message => {
+    if(message.content.startsWith(prefix + '2avatar')) {
+         var men = message.mentions.users.first();
+   var heg;
+      if(men) {
+          heg = men
+      } else {
+          heg = message.author
+      }
+  var avatar = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setTitle(heg.username)
+.setImage(heg.avatarURL)
+
+message.channel.sendEmbed(avatar)
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
