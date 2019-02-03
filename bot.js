@@ -661,7 +661,6 @@ client.on('guildCreate', guild => {
       guild.owner.send(embed)
 });
 
- client.on = new Discord.Client();//Toxic Codes // n3k4a is one
 client.on('ready', function(){//Toxic Codes // n3k4a is one
  console.log(`Logged in as ${client.user.tag}!`); //Toxic Codes // n3k4a is one
    
