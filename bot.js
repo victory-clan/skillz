@@ -660,10 +660,7 @@ client.on('guildCreate', guild => {
   .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك سيرفر الدعم الفنى :https://discord.gg/KAtNSuw**`)
       guild.owner.send(embed)
 });
-
-//Toxic Codes // n3k4a is one //Toxic Codes // n3k4a is one //Toxic Codes // n3k4a is one
  
-const Discord = require('discord.js')//Toxic Codes // n3k4a is one
 const client = new Discord.Client();//Toxic Codes // n3k4a is one
 client.on('ready', function(){//Toxic Codes // n3k4a is one
  console.log(`Logged in as ${client.user.tag}!`); //Toxic Codes // n3k4a is one
