@@ -74,6 +74,7 @@ client.on('ready', function(){
     }, ms);100000
 
 });
+
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
@@ -108,7 +109,8 @@ client.on("message", message => {
    message.author.sendEmbed(embed)
    
    }
-   });  
+   });
+
 client.on('message', message => {
      if (message.content === (prefix + "help")) {
      let embed = new Discord.RichEmbed()
@@ -118,6 +120,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
     var prefix = "_"
 var args = message.content.split(" ").slice(1);    
@@ -170,6 +173,7 @@ message.channel.send({embed});
 }
 
 });
+
 client.on('message', function(msg) {
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
@@ -205,6 +209,7 @@ client.on('message', message => {
       message.channel.sendEmbed(embed);
     }
 });
+
 client.on('message', function(message) {
     if(message.content.startsWith(prefix + 'roll')) {
         let args = message.content.split(" ").slice(1);
@@ -219,6 +224,7 @@ client.on('message', function(message) {
         }
     }
 });
+
 client.on('message', message => {
 if (message.content.startsWith("kick")) {
     var mention = message.mentions.members.first();
@@ -239,6 +245,7 @@ if (message.content.startsWith("ban")) {
     message.channel.send("تم أعطاء باند الى : " + mention.tag);
 };
 });
+
 client.on('message', msg => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
@@ -262,6 +269,7 @@ client.on('message', msg => {
     }
 }
 });
+
 client.on('message', message => {
     if (message.content.startsWith("رابط")) {
 
@@ -292,6 +300,7 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
+
 client.on('message', message => {
 if (message.content.startsWith(prefix+"ct")) {
     var args = message.content.split(" ").slice(1);
@@ -488,19 +497,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   });
   }
 });
-client.on('message', message => {  
-            if(!message.channel.guild) return; 
-var args = message.content.split(' ').slice(1).join(' '); 
-if (message.content.startsWith('*Founder')){ 
- if (message.author.id !== '413597534187945986') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **') 
-message.channel.sendMessage('جار ارسال الرسالة |✅') 
-client.users.forEach(m =>{ 
-m.sendMessage(args) 
-}) 
-} 
-});
-
-
 
 client.on('message', message => {
              if (!message.channel.guild) return;
@@ -680,5 +676,17 @@ client.on('ready', function(){//Toxic Codes // n3k4a is one
     });//Toxic Codes // n3k4a is one
     }, 5000);//سرعه تغير الصور  // n3k4a is one
 });//Toxic Codes // n3k4a is one
+
+client.on('message', message => {  
+            if(!message.channel.guild) return; 
+var args = message.content.split(' ').slice(1).join(' '); 
+if (message.content.startsWith('*Founder')){ 
+ if (message.author.id !== '413597534187945986') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **') 
+message.channel.sendMessage('جار ارسال الرسالة |✅') 
+client.users.forEach(m =>{ 
+m.sendMessage(args) 
+}) 
+} 
+});
 
 client.login(process.env.BOT_TOKEN);
