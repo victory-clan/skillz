@@ -488,7 +488,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   });
   }
 });
-
 client.on('message', message => {  
             if(!message.channel.guild) return; 
 var args = message.content.split(' ').slice(1).join(' '); 
