@@ -96,7 +96,7 @@ client.on("message", message => {
          _kick : طرد العضو من السيرفر
          _clear : مسح الشات
          _createroles : عمل رتب متكاملة للسيرفر
-  
+         _voicesetup : انشاء روم فويس اونلاين
          لكتابة الكلام الذي في الروم اكتب _voicesetup الكلام و 0 
          ------------------------------
          _guilds : عدد سيرفر البوت
@@ -474,7 +474,44 @@ client.on('message', message => {
 message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعه الرتب **')
 }
 });
-;
+
+      client.on('message', async message => {
+  if(message.content.startsWith(prefix + "voicesetup")) {
+  if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply(':x: **ليس لديك الصلاحيات الكافية**');
+  if(!message.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return message.reply(':x: **ليس معي الصلاحيات الكافية**');
+  var args = message.content.split(' ').slice(1).join(' ');
+  if(args && !args.includes(0)) return message.channel.send(':negative_squared_cross_mark: » فشل اعداد الروم الصوتي .. __يجب عليك كتابة 0 في اسم الروم__');
+  if(!args) args = `VoiceOnline: [ ${message.guild.members.filter(s => s.voiceChannel).size} ]`;
+  message.channel.send(':white_check_mark: » تم عمل الروم الصوتي بنجاح');
+  message.guild.createChannel(`${args.replace(0, message.guild.members.filter(s => s.voiceChannel).size)}`, 'voice').then(c => {
+    c.overwritePermissions(message.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+    setInterval(() => {
+      c.setName(`${args.replace(0, message.guild.members.filter(s => s.voiceChannel).size)}`).catch(err => {
+        if(err) return;
+      });
+    },3000);
+  });
+  }
+});
+
+client.on("guildMemberAdd", member => {
+        if(member.guild.id === "437236584329379841") {  // ايدي السيرفر
+  const channel = member.guild.channels.find('id', '437788428869042179'); //ايدي الروم
+if (!channel) return;
+channel.send(`**<@${member.user.id}> Welcome To __Sarcasm Land__  ** ❤️ `)  
+}});
+client.on("guildMemberRemove", member => {
+        if(member.guild.id === "437236584329379841") { 
+  const channel = member.guild.channels.find('id', '437788428869042179'); 
+if (!channel) return;
+  channel.send(`**${member.user.tag} Left The Server  ** 😭 `) 
+}});
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name",".Land,!")); //اسم الرتبة
+    });
 
 client.on('message', message => {
              if (!message.channel.guild) return;
