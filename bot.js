@@ -492,7 +492,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
         if(err) return;
       });
     },3000);
-  });
   }
 });
 
