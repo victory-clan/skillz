@@ -83,7 +83,6 @@ client.on("message", message => {
          .setDescription(`**
          ------------------------------
          _obc : برودكاست متوسط
-         _bc  : برودكاست عادى
          _bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
          _bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
          _bc3 : برودكاست للاعضاء  الاونلاين فقط
@@ -102,6 +101,7 @@ client.on("message", message => {
          _help : عرض هذه الرسالة
          _topinvites : توب انفيت
          ------------------------------
+         "by !Bako gaming#6414"
          
        **  `)
    message.author.sendEmbed(embed)
@@ -542,50 +542,6 @@ client.on('message' , async (message) => {
     }
 });
 
-client.on('message', message => {
-	    var prefix = "_";
-              if(!message.channel.guild) return;
-    if(message.content.startsWith(prefix + 'bc')) {
-    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-  if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-    let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "by !Bako gaming#6414";
-    let request = `Requested By ${message.author.username}`;
-    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-    msg.react('✅')
-    .then(() => msg.react('❌'))
-    .then(() =>msg.react('✅'))
-    
-    let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-    let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-    
-    let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-    let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
- reaction1.on("collect", r => {
-    message.channel.send(`**☑ | Done ... تم الانتهاء وارسال البرودكاست بنجاح __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
-    message.guild.members.forEach(m => {
-  
-  var bc = new
-       Discord.RichEmbed()
-       .setColor('RANDOM')
-       .setTitle('Broadcast')
-       .addField('سيرفر', message.guild.name)
-       .addField('المرسل', message.author.username)
-       .addField('الرسالة', args)
-       .setThumbnail(message.author.avatarURL)
-       .setFooter(copy, client.user.avatarURL);
-    m.send({ embed: bc })
-    msg.delete();
-    })
-    })
-    reaction2.on("collect", r => {
-    message.channel.send(`**تم الغاء ارسال البرودكاست.**`).then(m => m.delete(5000));
-    msg.delete();
-    })
-    })
-    }
-    });
-
 client.on('message', message => {/////toxic codes and zezo
     if(message.content.toLowerCase().startsWith(`discord.gg`)){
         message.member.addRole(message.guild.roles.find('name', 'Muted'));
@@ -679,5 +635,52 @@ m.sendMessage(args)
 }) 
 } 
 });
+
+ client.on('message', message => { //jackeo جاكيو
+    if (message.content.startsWith("تهكير")) {
+  if(!message.channel.guild) return message.reply(' ');//jackeo جاكيو
+      if (message.author.bot) return//jackeo جاكيو
+           message.delete();//jackeo جاكيو
+             let args = message.content.split(' ').slice(1);//jackeo جاكيو
+                   let virusname = args.join(' ');//jackeo جاكيو
+                 if (virusname < 1) {//jackeo جاكيو//jackeo جاكيو
+                     return message.channel.send("** رجائاََ منشن من تريد تهكيرة ** ");//jackeo جاكيو
+                                     }//jackeo جاكيو
+                 message.channel.send({embed: new Discord.RichEmbed().setTitle('Loading ' + virusname + "...").setColor(0xFF0000)}).then(function(m) {
+             setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading  [▓] 1%**`).setColor(0xFF0000)})
+             }, 5500)//jackeo جاكيو
+             setTimeout(function() {
+                m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓] 25%**`).setColor(0xFF0000)})
+              }, 10500)//jackeo جاكيو
+              setTimeout(function() {
+                 m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓▓▓▓▓] 50%**`).setColor(0xFF0000)})
+               }, 15500)//jackeo جاكيو
+               setTimeout(function() {
+                  m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 75%**`).setColor(0xFF0000)})
+                }, 25500)//jackeo جاكيو
+           setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** Hacking Done [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%**`).setColor(0xFF0000)})
+             }, 30500)//jackeo جاكيو
+                setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم الدخول للحساب** `).setColor(0xFF0000)})
+             }, 40500)//jackeo جاكيو
+                setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم حفض بينات الحساب** `).setColor(0xFF0000)})
+             }, 45500)//jackeo جاكيو
+                setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم رفع البينات** `).setColor(0xFF0000)})
+             }, 50500)//jackeo جاكيو
+              setTimeout(function() {
+               m.delete()//jackeo جاكيو
+           }, 55000)//jackeo جاكيو
+             setTimeout(function() {
+               message.channel.send('** تم الاختراق  __Done Hacking__ **').then(msg => msg.delete(25000));
+           }, 60500)//jackeo جاكيو
+           });//jackeo جاكيو
+         }//jackeo جاكيو
+ });//jackeo جاكيو
+
+
 
 client.login(process.env.BOT_TOKEN);
