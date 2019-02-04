@@ -666,7 +666,7 @@ m.sendMessage(args)
                m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم الدخول للحساب** `).setColor(0xFF0000)})
              }, 40500)//jackeo جاكيو
                 setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم حفض بينات الحساب** `).setColor(0xFF0000)})
+               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم حفظ بينات الحساب** `).setColor(0xFF0000)})
              }, 45500)//jackeo جاكيو
                 setTimeout(function() {
                m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم رفع البينات** `).setColor(0xFF0000)})
