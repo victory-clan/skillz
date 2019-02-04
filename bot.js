@@ -680,14 +680,4 @@ m.sendMessage(args)
 } 
 });
 
-  client.on('message',function(message) {
-    var prefix = "_";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "say")) {
-        message.channel.then.message.delete(10000)}
-    if(!args) return;
-    message.channel.send(`**${args}**`);
-    }
-    );
-
 client.login(process.env.BOT_TOKEN);
