@@ -766,8 +766,6 @@ client.on('message',message =>{   ///Toxic Codes
     }   ///Toxic Codes
   });  ///Toxic Codes
 
-var prefix = "_";
-
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "obc")) {
