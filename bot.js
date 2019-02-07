@@ -29,7 +29,6 @@ client.on('ready', function(){
     }, 5000);
 });
 
-const devs = ["439187325503930369","370308123153661974"];
 const prefix = "_"
 
 client.on('message', async msg => {
@@ -224,7 +223,7 @@ function play(guild, song) {
 }
  
 const adminprefix = "$vip";
-const devs = ['413597534187945986'];
+const devs = ["541681966404075520","413597534187945986"];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
